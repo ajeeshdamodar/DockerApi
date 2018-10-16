@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  dockerapi:
+    image: ${DOCKER_REGISTRY}dockerapi
+    container_name: my_api_container
+    build:
+      context: .
+      dockerfile: DockerApi/Dockerfile
+    environment:
+      SQLSERVER_HOST: db
+      SA_PASSWORD: Ajeesh250282
+    #expose:
+    #  - 8181
+    #ports:
+    #  - "8181:8181"
+    depends_on:
+      - db
+  flyway:
+    image: boxfuse/flyway
+    #container_name: flyway_container
+    command: -url=jdbc:jtds:sqlserver://db -user=sa -password=Ajeesh250282 -connectRetries=300 migrate
+    volumes:
+      - .:/flyway/sql
+    depends_on:
+      - db
+  db:
+    image: "microsoft/mssql-server-linux:2017-latest"
+    #container_name: linuxsqlcontainer
+    ports:
+      - 1436:1433
+    environment:
+      SA_PASSWORD: Ajeesh250282
+      ACCEPT_EULA: Y
+ 
