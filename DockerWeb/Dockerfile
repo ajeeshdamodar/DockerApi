@@ -20,5 +20,5 @@ COPY . /usr/src/app
 #EXPOSE 4200
 
 # Serve the app
-CMD ng serve --host 0.0.0.0 --port 4200
+CMD ng serve --host 0.0.0.0 --port 4200 --aot
 #CMD ["npm", "start"]
