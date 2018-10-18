@@ -20,17 +20,25 @@ namespace DockerApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        { 
+        {
             // Add framework services.
             // services.AddMvc();
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+           
             var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
             var password = Environment.GetEnvironmentVariable("SA_PASSWORD") ?? "Ajeesh250282#";
             var connString = $"Server={hostname};Database=DockerTestDb;User=sa;Password={password};";
             //SqlConnection con = new SqlConnection(connString);
             //con.Open(); 
             services.AddDbContext<ApiContext>(options => options.UseSqlServer(connString));
-        
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
         }
@@ -41,8 +49,10 @@ namespace DockerApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
 
+            app.UseCors("MyPolicy");
             app.UseMvc();
         }
     }

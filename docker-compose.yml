@@ -1,19 +1,28 @@
 version: '3.4'
 
 services:
+  angularui:
+    #container_name: angular_ui_container
+    build:
+      context: .
+      dockerfile: ./DockerWeb/Dockerfile
+    volumes:
+      - './DockerWeb:/usr/src/app'
+    ports:
+      - 4200:4200
   dockerapi:
     image: ${DOCKER_REGISTRY}dockerapi
     container_name: my_api_container
     build:
       context: .
-      dockerfile: DockerApi/Dockerfile
+      dockerfile: ./DockerApi/Dockerfile
     environment:
       SQLSERVER_HOST: db
       SA_PASSWORD: Ajeesh250282
     #expose:
-    #  - 8181
-    #ports:
-    #  - "8181:8181"
+     # - 80
+    ports:
+      - 4300:80
     depends_on:
       - db
   flyway:
