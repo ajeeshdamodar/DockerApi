@@ -2,13 +2,17 @@
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
-    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerTargetOS>Windows</DockerTargetOS>
     <ProjectGuid>c8a0ad04-7929-48bc-aff7-bf7cda367d3e</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
     <DockerServiceName>dockerapi</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="docker-compose-ci.override.yml" />
+    <None Include="docker-compose-ci.yml" />
+    <None Include="docker-compose-test.override.yml" />
+    <None Include="docker-compose-test.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>

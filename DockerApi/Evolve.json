@@ -1,0 +1,6 @@
+{
+  "Evolve.Driver": "SqlClient",
+  "Evolve.Locations": "flyway\\sql",
+  "Evolve.ConnectionString": "Server=devsql-fpsc.uhc-dev.edu,1433;database=DockerTestDb;user id=dev_fpsc_data_owner;password=Zaq1xsw2Cde3;", // "Data Source=:memory:"
+  "Evolve.Command": "migrate"
+}
