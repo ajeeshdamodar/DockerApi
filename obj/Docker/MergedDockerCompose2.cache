@@ -1,0 +1,42 @@
+services:
+  angularui:
+    build:
+      context: C:\Work\DockerTest\DockerApi
+      dockerfile: ./DockerWeb/Dockerfile
+    ports:
+    - published: 4200
+      target: 4200
+    volumes:
+    - C:\Work\DockerTest\DockerApi\DockerWeb:/usr/src/app:rw
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Ajeesh250282
+    image: microsoft/mssql-server-linux:2017-latest
+    ports:
+    - published: 1436
+      target: 1433
+  dockerapi:
+    build:
+      context: C:\Work\DockerTest\DockerApi
+      dockerfile: ./DockerApi/Dockerfile
+    depends_on:
+    - db
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      SA_PASSWORD: Ajeesh250282
+      SQLSERVER_HOST: db
+    image: dockerapi
+    ports:
+    - published: 4300
+      target: 80
+    - target: 80
+  flyway:
+    command: -url=jdbc:jtds:sqlserver://db -user=sa -password=Ajeesh250282 -connectRetries=300
+      migrate
+    depends_on:
+    - db
+    image: boxfuse/flyway
+    volumes:
+    - C:\Work\DockerTest\DockerApi:/flyway/sql:rw
+version: '3.4'

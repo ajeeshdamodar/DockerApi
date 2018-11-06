@@ -34,9 +34,9 @@ namespace DockerApi
 
 
             var hostname = Environment.GetEnvironmentVariable("SQLSERVER_HOST") ?? "localhost";
-            var password = Environment.GetEnvironmentVariable("SA_PASSWORD") ?? "Ajeesh250282#";
-            // var connString = $"Server={hostname};Database=DockerTestDb;User=sa;Password={password};";
-            var connString = Configuration.GetConnectionString("DefaultConnection");
+            var password = Environment.GetEnvironmentVariable("SA_PASSWORD") ?? "Ajeesh250282";
+            var connString = $"Server={hostname};Database=DockerTestDb;User=sa;Password={password};";
+           // var connString = Configuration.GetConnectionString("DefaultConnection");
             //SqlConnection con = new SqlConnection(connString);
             //con.Open(); 
 

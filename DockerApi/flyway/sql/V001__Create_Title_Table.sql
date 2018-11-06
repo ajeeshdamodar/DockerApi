@@ -15,5 +15,7 @@ GO
 INSERT INTO dbo.Products (Name,Price) VALUES ('Laptop', 1000.00)
 INSERT INTO dbo.Products (Name,Price) VALUES ('Mouse', 10.00)
 INSERT INTO dbo.Products (Name,Price) VALUES ('Monitor', 200.00)
+INSERT INTO dbo.Products (Name,Price) VALUES ('Head phone', 100.00)
+
 
 GO

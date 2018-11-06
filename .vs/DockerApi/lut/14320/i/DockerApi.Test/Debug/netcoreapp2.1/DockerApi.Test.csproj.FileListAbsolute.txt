@@ -1,0 +1,13 @@
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.deps.json
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.runtimeconfig.json
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.runtimeconfig.dev.json
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\b\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.dll
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.csprojAssemblyReference.cache
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.csproj.CoreCompileInputs.cache
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.AssemblyInfoInputs.cache
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.AssemblyInfo.cs
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.csproj.CopyComplete
+C:\Work\DockerTest\DockerApi\.vs\DockerApi\lut\0\i\DockerApi.Test\Debug\netcoreapp2.1\DockerApi.Test.dll
